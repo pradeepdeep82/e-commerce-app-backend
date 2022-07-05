@@ -20,8 +20,8 @@ export const app = express();
 //While putting in heroku give process.env.PORT || 5000   heroku will automatically assign it
 const PORT = process.env.PORT || 6002;
 
-const MONGO_URL = "mongodb://localhost";
-// const MONGO_URL=process.env.MONGO_URL;
+// const MONGO_URL = "mongodb://localhost";
+const MONGO_URL=process.env.MONGO_URL;
 export async function createConnection() {
   const client = new MongoClient(MONGO_URL);
   await client.connect();
